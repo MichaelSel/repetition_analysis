@@ -164,7 +164,7 @@ def perm_bias_paired(X, Y, reps=10000):
 
     # get observed statistic based on the test of interest
     observation = X - Y
-    obs_stat = observation
+    obs_stat = np.mean(observation)
 
     # concatenate data from both vars
     data_concat = np.concatenate((X, Y), axis=0)
@@ -180,7 +180,7 @@ def perm_bias_paired(X, Y, reps=10000):
         rand = random_split[0] - random_split[1]
 
         # push back R value
-        rand_vals.append(rand)
+        rand_vals.append(np.mean(rand))
 
     rand_vals = np.array(rand_vals)
 

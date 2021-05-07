@@ -5,12 +5,11 @@ import numpy as np
 import reformat_data
 import statistics as stat
 
-
-
 #define directories
 processed_dir = './processed'
 analyzed_dir = './analyzed'
 all_data_path = processed_dir + "/repetition_all_subjects.json"
+
 
 responses_excluded=0
 def get_json(path):
